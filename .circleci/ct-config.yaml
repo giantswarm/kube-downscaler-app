@@ -1,0 +1,3 @@
+---
+chart-repos:
+- py-kube-downscaler=https://caas-team.github.io/helm-charts/

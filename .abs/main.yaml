@@ -1,4 +1,5 @@
 replace-chart-version-with-git: true
 generate-metadata: true
 chart-dir: ./helm/kube-downscaler
+ct-config: ./.circleci/ct-config.yaml
 destination: ./build
