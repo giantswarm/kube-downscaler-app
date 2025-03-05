@@ -43,6 +43,7 @@ kube-downscaler:
 
   extraConfig: |
     DOWNSCALE_PERIOD: "Sat-Sat 02:00-24:00 CET,Sun-Sun 00:00-22:00 CET"
+    DOWNTIME_REPLICAS: 1
 
   securityContext:
     runAsNonRoot: true
