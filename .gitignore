@@ -1,0 +1,2 @@
+helm/kube-downscaler/charts/*.tgz
+helm/kube-downscaler/Chart.lock

@@ -12,6 +12,7 @@ workflows:
           app_catalog: control-plane-catalog
           app_catalog_test: control-plane-test-catalog
           chart: kube-downscaler
+          ct_config: ".circleci/ct-config.yml"
           # Trigger job on git tag.
           filters:
             tags:

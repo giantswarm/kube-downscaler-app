@@ -1,10 +1,16 @@
 apiVersion: v2
-appVersion: 0.1.0
+appVersion: 24.12.0
 name: kube-downscaler
 description: Downscaling tool to save on resources with dev clusters when they are not used
 home: https://github.com/giantswarm/kube-downscaler
 sources:
-  - https://codeberg.org/hjacobs/kube-downscaler
+  - https://github.com/caas-team/py-kube-downscaler
+dependencies:
+  - name: py-kube-downscaler
+    alias: kube-downscaler
+    version: 0.2.12
+    repository: https://caas-team.github.io/helm-charts/
+    condition: enabled
 version: 0.4.0
 annotations:
   application.giantswarm.io/team: planeteers
