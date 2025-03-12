@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 24.12.0
+appVersion: 25.3.0
 name: kube-downscaler
 description: Downscaling tool to save on resources with dev clusters when they are not used
 home: https://github.com/giantswarm/kube-downscaler

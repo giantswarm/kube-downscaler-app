@@ -22,9 +22,9 @@ daemonset:
 
 kube-downscaler:
   image:
-    repository: gsoci.azurecr.io/giantswarm/kube-downscaler
+    repository: gsoci.azurecr.io/giantswarm/py-kube-downscaler
     pullPolicy: IfNotPresent
-    tag: 23.2.0
+    tag: 25.3.0
 
   arguments:
   - --interval=60
