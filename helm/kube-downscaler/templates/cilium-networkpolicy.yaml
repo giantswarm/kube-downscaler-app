@@ -26,5 +26,5 @@ spec:
         - matchPattern: '*'
   endpointSelector:
     matchLabels:
-    {{- include "labels.selector" . | nindent 6 }}
+      application: {{ template "kube-downscaler.name" . }}
 {{- end }}
