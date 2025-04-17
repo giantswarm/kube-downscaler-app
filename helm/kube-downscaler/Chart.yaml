@@ -11,6 +11,6 @@ dependencies:
     version: 0.2.12
     repository: https://caas-team.github.io/helm-charts/
     condition: enabled
-version: 0.6.1
+version: 0.6.2
 annotations:
   application.giantswarm.io/team: planeteers
