@@ -1,6 +1,8 @@
-checks:	
-  addAllBuiltIn: true	
-  exclude:	
+checks:
+  addAllBuiltIn: true
+  ignorePaths:
+  - "**/charts/py-kube-downscaler/**"
+  exclude:
   - "use-namespace"
   - "unset-memory-requirements"
   - "unset-cpu-requirements"
