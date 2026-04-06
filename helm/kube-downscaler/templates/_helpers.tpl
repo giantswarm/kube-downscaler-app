@@ -25,8 +25,9 @@ app.kubernetes.io/name: {{ include "kube-downscaler.name" . | quote }}
 Common labels
 */}}
 {{- define "labels.common" -}}
-{{ include "labels.selector" . }}
+app.kubernetes.io/instance: {{ .Release.Name | quote }}
 app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+app.kubernetes.io/name: {{ include "kube-downscaler.name" . | quote }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 application.giantswarm.io/team: {{ index .Chart.Annotations "application.giantswarm.io/team" | quote }}
 giantswarm.io/managed-by: {{ .Release.Name | quote }}
