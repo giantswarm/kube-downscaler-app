@@ -2,10 +2,10 @@
 apiVersion: cilium.io/v2
 kind: CiliumNetworkPolicy
 metadata:
-  name: {{ template "kube-downscaler.name" . }}
-  namespace: {{ .Release.Namespace }}
   labels:
   {{- include "labels.common" . | nindent 4 }}
+  name: {{ template "kube-downscaler.name" . }}
+  namespace: {{ .Release.Namespace }}
 spec:
   egress:
   - toEntities:

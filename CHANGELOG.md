@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default. 
+- Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default.
+- Fix the ordering of the labels.
 
 ## [0.6.3] - 2026-01-30
 
