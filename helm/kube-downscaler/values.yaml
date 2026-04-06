@@ -1,7 +1,7 @@
 enabled: false
 
 ciliumNetworkPolicy:
-  enabled: false
+  enabled: true
 
 daemonset:
   downscale: false

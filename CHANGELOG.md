@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default. 
+
 ## [0.6.3] - 2026-01-30
 
 ### Changed
