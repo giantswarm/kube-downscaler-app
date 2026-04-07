@@ -17,16 +17,17 @@ Create chart name and version as used by the chart label.
 Selector labels
 */}}
 {{- define "labels.selector" -}}
-app.kubernetes.io/name: {{ include "kube-downscaler.name" . | quote }}
 app.kubernetes.io/instance: {{ .Release.Name | quote }}
+app.kubernetes.io/name: {{ include "kube-downscaler.name" . | quote }}
 {{- end -}}
 
 {{/*
 Common labels
 */}}
 {{- define "labels.common" -}}
-{{ include "labels.selector" . }}
+app.kubernetes.io/instance: {{ .Release.Name | quote }}
 app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+app.kubernetes.io/name: {{ include "kube-downscaler.name" . | quote }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 application.giantswarm.io/team: {{ index .Chart.Annotations "application.giantswarm.io/team" | quote }}
 giantswarm.io/managed-by: {{ .Release.Name | quote }}
