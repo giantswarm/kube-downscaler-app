@@ -24,7 +24,7 @@ kube-downscaler:
   image:
     repository: gsoci.azurecr.io/giantswarm/py-kube-downscaler
     pullPolicy: IfNotPresent
-    tag: 25.11.0
+    tag: 26.4.0
 
   arguments:
   - --interval=60
