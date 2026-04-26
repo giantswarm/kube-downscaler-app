@@ -9,7 +9,7 @@ sources:
 dependencies:
   - name: py-kube-downscaler
     alias: kube-downscaler
-    version: 0.2.12
+    version: 0.3.12
     repository: https://caas-team.github.io/helm-charts/
     condition: enabled
 version: 0.6.3
