@@ -7,6 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default.
+- Fix the ordering of the labels.
+
+## [0.6.3] - 2026-01-30
+
+### Changed
+
+- Build with up-to-date pipelines.
+
+## [0.6.2] - 2025-04-17
+
+- Fix home URL in chart metadata
+
+## [0.6.1] - 2025-03-17
+
+### Changed
+
+- Fix ciliumnetpol's endpointSelector.
+
+## [0.6.0] - 2025-03-12
+
+### Changed
+
+- Update chart's image.
+
+## [0.5.0] - 2025-03-06
+
+### Changed
+
+- Updated Helm chart to use the `caas-team/py-kube-downscaler` upstream one as dependency.
+- Updated application.giantswarm.io/team label from Team Horizon to Team Planeteers.
+
 ## [0.4.0] - 2024-12-09
 
 ### Added
@@ -35,7 +69,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed: `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.3...HEAD
+[0.6.3]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.2...v0.6.3
+[0.6.2]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.1...v0.6.2
+[0.6.1]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.0...v0.6.1
+[0.6.0]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.1.0...v0.2.0
