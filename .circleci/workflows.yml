@@ -18,7 +18,7 @@ workflows:
         executor: app-build-suite
         context: architect
         name: build-chart
-        app_catalog: giantswarm-catalog
+        app_catalog: control-plane-catalog
         app_catalog_test: giantswarm-test-catalog
         chart: kube-downscaler-app
         push_to_appcatalog: false
@@ -63,7 +63,7 @@ workflows:
         executor: app-build-suite
         context: architect
         name: push-chart-release
-        app_catalog: giantswarm-catalog
+        app_catalog: control-plane-catalog
         app_catalog_test: giantswarm-test-catalog
         chart: kube-downscaler-app
         requires:
