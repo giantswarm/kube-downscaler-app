@@ -34,4 +34,3 @@ giantswarm.io/managed-by: {{ .Release.Name | quote }}
 giantswarm.io/service-type: "managed"
 helm.sh/chart: {{ include "chart" . | quote }}
 {{- end -}}
-
