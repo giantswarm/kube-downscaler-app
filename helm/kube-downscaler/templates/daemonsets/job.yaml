@@ -22,7 +22,7 @@ spec:
             {{- include "labels.common" . | nindent 12 }}
         spec:
           serviceAccountName: {{ template "kube-downscaler.name" . }}-daemonset-downscaler
-          restartPolicy: OnFailure      
+          restartPolicy: OnFailure
           containers:
           - name: {{ template "kube-downscaler.name" . }}-daemonset-doswnscaler
             image: "{{ .Values.daemonset.job.image.registry }}/{{ .Values.daemonset.job.image.name }}:{{ .Values.daemonset.job.image.tag }}"
@@ -53,7 +53,7 @@ spec:
             {{- include "labels.common" . | nindent 12 }}
         spec:
           serviceAccountName: {{ template "kube-downscaler.name" . }}-daemonset-downscaler
-          restartPolicy: OnFailure      
+          restartPolicy: OnFailure
           containers:
           - name: {{ template "kube-downscaler.name" . }}-daemonset-awekener
             image: "{{ .Values.daemonset.job.image.registry }}/{{ .Values.daemonset.job.image.name }}:{{ .Values.daemonset.job.image.tag }}"
