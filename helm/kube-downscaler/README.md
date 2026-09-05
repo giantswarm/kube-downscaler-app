@@ -37,7 +37,7 @@ Downscaling tool to save on resources with dev clusters when they are not used
 | kube-downscaler.serviceAccount.name | string | `""` |  |
 | kube-downscaler.excludedNamespaces | list | `[]` |  |
 | kube-downscaler.configMapName | string | `"kube-downscaler"` |  |
-| kube-downscaler.extraConfig | string | `"DOWNSCALE_PERIOD: \"Sat-Sat 02:00-24:00 CET,Sun-Sun 00:00-22:00 CET\"\nDOWNTIME_REPLICAS: 1\n"` |  |
+| kube-downscaler.extraConfig | string | `"DOWNSCALE_PERIOD: \"Sat-Sat 02:00-24:00 CET,Sun-Sun 00:00-22:00 CET\"\nDOWNTIME_REPLICAS: \"1\"\n"` |  |
 | kube-downscaler.securityContext.runAsNonRoot | bool | `true` |  |
 | kube-downscaler.securityContext.runAsUser | int | `1000` |  |
 | kube-downscaler.securityContext.runAsGroup | int | `1000` |  |
