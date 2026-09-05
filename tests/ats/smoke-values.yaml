@@ -1,0 +1,8 @@
+# Values for the app-test-suite smoke (tests/ats/test_smoke.py) on the bare kind cluster
+# the generated execute-chart-tests job creates. Layered over the chart defaults, see
+# .ats/main.yaml (app-tests-app-config-file).
+
+# The chart renders nothing but a CiliumNetworkPolicy until `enabled` is set (the
+# py-kube-downscaler dependency hangs on the same flag), so the smoke turns it on and
+# waits for the downscaler Deployment. Its image (gsoci py-kube-downscaler) is public.
+enabled: true

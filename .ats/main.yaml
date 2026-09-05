@@ -1,8 +1,10 @@
-# app-test-suite config for the generated `execute-chart-tests` CI job.
-#
-# All test steps are skipped: app-test-suite's smoke scenario runs pytest tests
-# from `tests/ats`, which this repo does not have yet (the directory only holds
-# the generated dependency files). Skipping keeps the job green while build-chart
-# still validates that the chart packages cleanly. Add `tests/ats/test_*.py`
-# smoke scenarios and drop `smoke` from skip-steps to enable real deploy testing.
-skip-steps: [smoke, functional, upgrade]
+# app-test-suite (ats >= 1.0) config for the generated execute-chart-tests CircleCI job.
+# ats creates a kind cluster, applies its bundled CRDs (Cilium included, so the
+# CiliumNetworkPolicy installs), installs the packaged chart with
+# `helm upgrade --install --wait` and runs `uv run pytest -m smoke` in tests/ats.
+app-tests-deploy-namespace: kube-downscaler
+app-tests-app-config-file: tests/ats/smoke-values.yaml
+
+# functional: no functional tests yet.
+# upgrade: needs upgrade-tests-app-catalog-url pointing at the released chart; not wired.
+skip-steps: [functional, upgrade]
