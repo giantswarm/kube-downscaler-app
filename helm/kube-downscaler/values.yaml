@@ -20,7 +20,9 @@ daemonset:
   #   namespace: <daemonset-namespace>
   list: []
 
-kube-downscaler:
+# Values for the py-kube-downscaler dependency. Helm merges the dependency's own defaults in
+# here at install time, so the schema must accept keys this file does not spell out.
+kube-downscaler:  # @schema additionalProperties: true
   image:
     repository: gsoci.azurecr.io/giantswarm/py-kube-downscaler
     pullPolicy: IfNotPresent
@@ -30,7 +32,7 @@ kube-downscaler:
   - --interval=60
   - --include-resources=deployments,statefulsets,scaledobjects,horizontalpodautoscalers
 
-  serviceAccount:
+  serviceAccount:  # @schema additionalProperties: true
     # Specifies whether a service account should be created
     create: true
     # The name of the service account to use.
@@ -43,9 +45,9 @@ kube-downscaler:
 
   extraConfig: |
     DOWNSCALE_PERIOD: "Sat-Sat 02:00-24:00 CET,Sun-Sun 00:00-22:00 CET"
-    DOWNTIME_REPLICAS: 1
+    DOWNTIME_REPLICAS: "1"
 
-  securityContext:
+  securityContext:  # @schema additionalProperties: true
     runAsNonRoot: true
     runAsUser: 1000
     runAsGroup: 1000
@@ -57,7 +59,7 @@ kube-downscaler:
     seccompProfile:
       type: RuntimeDefault
 
-  podSecurityContext:
+  podSecurityContext:  # @schema additionalProperties: true
     fsGroup: 1000
     runAsGroup: 1000
     runAsNonRoot: true
