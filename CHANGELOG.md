@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default.
 - Fix the ordering of the labels.
 
+### Fixed
+
+- Keep the `helm.sh/chart` label valid for long chart versions: the 63-character cut no longer ends in `.`, `_` or `-`, which made the API server refuse every labelled object.
+
 ## [0.6.3] - 2026-01-30
 
 ### Changed

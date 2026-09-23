@@ -8,9 +8,12 @@ Expand the name of the chart.
 
 {{/*
 Create chart name and version as used by the chart label.
+A label value must end in an alphanumeric character, so the 63-character cut of a
+long version (a branch build, or helm-controller's "<tag>+<digest>") drops every
+trailing "-", "." and "_".
 */}}
 {{- define "chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
+{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimAll "-._" -}}
 {{- end -}}
 
 {{/*
