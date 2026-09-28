@@ -6,6 +6,7 @@ Downscaling tool to save on resources with dev clusters when they are not used
 
 ## Source Code
 
+* <https://github.com/giantswarm/py-kube-downscaler>
 * <https://github.com/caas-team/py-kube-downscaler>
 
 ## Requirements
@@ -28,9 +29,9 @@ Downscaling tool to save on resources with dev clusters when they are not used
 | daemonset.job.downscaleSchedule | string | `"0 2 * * 6"` |  |
 | daemonset.job.upscaleSchedule | string | `"0 22 * * 7"` |  |
 | daemonset.list | list | `[]` |  |
-| kube-downscaler.image.repository | string | `"gsoci.azurecr.io/giantswarm/py-kube-downscaler"` |  |
+| kube-downscaler.image.repository | string | `"gsoci.azurecr.io/giantswarm/py-kube-downscaler/kube-downscaler"` |  |
 | kube-downscaler.image.pullPolicy | string | `"IfNotPresent"` |  |
-| kube-downscaler.image.tag | string | `"26.4.0"` |  |
+| kube-downscaler.image.tag | string | `"26.4.1"` |  |
 | kube-downscaler.arguments[0] | string | `"--interval=60"` |  |
 | kube-downscaler.arguments[1] | string | `"--include-resources=deployments,statefulsets,scaledobjects,horizontalpodautoscalers"` |  |
 | kube-downscaler.serviceAccount.create | bool | `true` |  |
