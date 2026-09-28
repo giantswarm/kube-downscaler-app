@@ -6,6 +6,7 @@ Downscaling tool to save on resources with dev clusters when they are not used
 
 ## Source Code
 
+* <https://github.com/giantswarm/py-kube-downscaler>
 * <https://github.com/caas-team/py-kube-downscaler>
 
 ## Requirements
