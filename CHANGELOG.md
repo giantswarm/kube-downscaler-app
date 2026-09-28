@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Run the Giant Swarm line of py-kube-downscaler (`26.4.1`, [giantswarm/py-kube-downscaler](https://github.com/giantswarm/py-kube-downscaler)): a Deployment or StatefulSet that an HPA targets is left to the HPA, and only the HPA is downscaled, so the two no longer fight every interval. HPAs owned by a KEDA ScaledObject are no longer set to `minReplicas: -1`. The image also carries the Alpine and urllib3 security fixes.
 - Keep the `helm.sh/chart` label valid for long chart versions: the 63-character cut no longer ends in `.`, `_` or `-`, which made the API server refuse every labelled object.
 
 ## [0.6.3] - 2026-01-30

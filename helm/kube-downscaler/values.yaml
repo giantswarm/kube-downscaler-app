@@ -23,10 +23,12 @@ daemonset:
 # Values for the py-kube-downscaler dependency. Helm merges the dependency's own defaults in
 # here at install time, so the schema must accept keys this file does not spell out.
 kube-downscaler:  # @schema additionalProperties: true
+  # The Giant Swarm line of py-kube-downscaler (https://github.com/giantswarm/py-kube-downscaler,
+  # owned by Team Planeteers): upstream's release plus the patches listed in its FORK.md.
   image:
-    repository: gsoci.azurecr.io/giantswarm/py-kube-downscaler
+    repository: gsoci.azurecr.io/giantswarm/py-kube-downscaler/kube-downscaler
     pullPolicy: IfNotPresent
-    tag: 26.4.0
+    tag: 26.4.1
 
   arguments:
   - --interval=60

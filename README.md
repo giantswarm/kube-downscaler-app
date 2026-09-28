@@ -9,9 +9,9 @@ Here we define the kube-downscaler chart with its templates and default configur
 
 **What is this app?**
 
-This app allows to scale down clusters' workload when it's not needed. `kube-downscaler` is a tool which scales down deployments, statefulsets even when horizontal-pod-autoscaler is enabled and suspend cronjobs.
+This app allows to scale down clusters' workload when it's not needed. `kube-downscaler` is a tool which scales down deployments, statefulsets, horizontal-pod-autoscalers and KEDA scaled objects, and suspends cronjobs. When `horizontalpodautoscalers` is included, a workload an HPA targets is left to the HPA and only the HPA's `minReplicas` is lowered.
 
-For more details concerning the tool itself, check the [upstream project](https://codeberg.org/hjacobs/kube-downscaler).
+The app runs [giantswarm/py-kube-downscaler](https://github.com/giantswarm/py-kube-downscaler), Team Planeteers' line of the [upstream project](https://github.com/caas-team/py-kube-downscaler): upstream's release plus the patches listed in its `FORK.md`.
 
 **Why did we add it?**
 
@@ -48,7 +48,7 @@ You may instead use the `DEFAULT_UPTIME` variable which will define the time per
 
 You can exclude workloads by using the `downscaler/exclude: true` annotation. You can also override the default downtime/uptime defined in the values for any workload with the `downscaler/uptime` or `downscaler/downtime` annotations.
 
-For more detailed configuration possibilities, please check out the [upstream project](https://codeberg.org/hjacobs/kube-downscaler).
+For more detailed configuration possibilities, please check out the [upstream project](https://github.com/caas-team/py-kube-downscaler).
 
 ## Limitations
 
@@ -56,4 +56,4 @@ This app only scales down workload and doesn't actually scales down the cluster'
 
 ## Credit
 
--  https://codeberg.org/hjacobs/kube-downscaler
+- https://github.com/caas-team/py-kube-downscaler

@@ -4,5 +4,5 @@
 
 # The chart renders nothing but a CiliumNetworkPolicy until `enabled` is set (the
 # py-kube-downscaler dependency hangs on the same flag), so the smoke turns it on and
-# waits for the downscaler Deployment. Its image (gsoci py-kube-downscaler) is public.
+# waits for the downscaler Deployment. Its image (gsoci py-kube-downscaler/kube-downscaler) is public.
 enabled: true
