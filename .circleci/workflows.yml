@@ -5,7 +5,7 @@
 # workflow in .circleci/config.yml merges into this file at pipeline runtime.
 version: 2.1
 orbs:
-  architect: giantswarm/architect@10.11.0
+  architect: giantswarm/architect@10.12.1
 
 workflows:
   build:
@@ -34,6 +34,7 @@ workflows:
           branches:
             ignore:
             - main
+            - /^release-v?[0-9]+(\.[0-9]+)?\.x$/
 
     # Branch: run chart tests after build-chart. When branchPublish pushes a dev
     # image, the test also waits on push-to-registries -- run-tests-with-ats
@@ -58,6 +59,7 @@ workflows:
           branches:
             ignore:
             - main
+            - /^release-v?[0-9]+(\.[0-9]+)?\.x$/
 
     # Tag: push the chart after build-chart (+ the gsoci image). The chart
     # tests ran on the branch (execute-chart-tests) and the tag is cut from the
