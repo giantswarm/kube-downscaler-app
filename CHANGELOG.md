@@ -7,15 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-
-- Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default.
-- Fix the ordering of the labels.
+## [0.6.19] - 2026-09-28
 
 ### Fixed
 
 - Run the Giant Swarm line of py-kube-downscaler (`26.4.1`, [giantswarm/py-kube-downscaler](https://github.com/giantswarm/py-kube-downscaler)): a Deployment or StatefulSet that an HPA targets is left to the HPA, and only the HPA is downscaled, so the two no longer fight every interval. HPAs owned by a KEDA ScaledObject are no longer set to `minReplicas: -1`. The image also carries the Alpine and urllib3 security fixes.
+
+## [0.6.15] - 2026-09-23
+
+### Fixed
+
 - Keep the `helm.sh/chart` label valid for long chart versions: the 63-character cut no longer ends in `.`, `_` or `-`, which made the API server refuse every labelled object.
+
+## [0.6.4] - 2026-06-24
+
+### Changed
+
+- Change `ciliumNetworkPolicy.enabled` default value to true to render `CiliumNetworkPolicy` by default.
+- Fix the ordering of the labels.
 
 ## [0.6.3] - 2026-01-30
 
@@ -74,7 +83,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed: `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.3...HEAD
+[Unreleased]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.19...HEAD
+[0.6.19]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.15...v0.6.19
+[0.6.15]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.4...v0.6.15
+[0.6.4]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/giantswarm/kube-downscaler-app/compare/v0.6.0...v0.6.1
