@@ -13,7 +13,7 @@ Downscaling tool to save on resources with dev clusters when they are not used
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://caas-team.github.io/helm-charts/ | kube-downscaler(py-kube-downscaler) | 0.3.12 |
+| https://caas-team.github.io/helm-charts/ | kube-downscaler(py-kube-downscaler) | 0.3.13 |
 
 ## Values
 
